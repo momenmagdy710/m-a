@@ -448,3 +448,13 @@
 .footer .copyright a:hover {
     color: #FFFFFF;
 }
+
+@media screen and (max-width:600px) {
+    .footer .btn.btn-link {
+        text-align: right;
+
+    }
+    .row {
+        
+    }
+}
