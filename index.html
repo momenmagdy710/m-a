@@ -148,6 +148,31 @@
             </button>
         </div>
     </div>
+    
+    <carousel
+    v-show="hostelImages.length"
+    :centerMode="false"
+    :perPage="1"
+    :navigationEnabled="true"
+    paginationColor="#7e7e7e"
+    paginationPosition="bottom"
+    class="m-4"
+    zIndex= "100 !important"
+>
+<slide v-for="nextHostelImage, index in hostelImages" :key="nextHostelImage.id">
+    <img
+            :src="nextHostelImage.filenameData.image_url"
+            :alt="nextHostelImage.filename"
+            style="width:320px; height : auto; "
+            v-focus.lazy="true"
+    >
+    <p class="description-text pl-5 pr-5">
+        {{ nextHostelImage.info }}
+    </p>
+</slide>
+</carousel>
+
+
     <!-- Carousel End -->
 
 
